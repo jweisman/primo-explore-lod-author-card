@@ -1,0 +1,17 @@
+{
+  "name": "primo-explore-lod-author-card",
+  "version": "0.0.1",
+  "description": "Linked Open Data Author Card for Primo Explore",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jweisman/primo-explore-lod-author-card.git"
+  },
+  "keywords": [
+    "primo-explore",
+    "linked-data"
+  ],
+  "author": "Josh Weisman",
+  "license": "MIT",
+  "homepage": "https://github.com/jweisman/primo-explore-lod-author-card#readme"
+}

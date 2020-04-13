@@ -1,0 +1,46 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Serverless BibCard
+Globals:
+  Function:
+    Timeout: 30
+Resources:
+  BibCardFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: s3://aws-sam-cli-managed-default-samclisourcebucket-fn1hn3mq5ls0/0d84c66d02382111c3c5fac4f23cc8ff
+      Handler: lambda_function.lambda_handler
+      Runtime: ruby2.7
+      Layers:
+      - arn:aws:lambda:us-east-1:523567452838:layer:BibCard-Dependencies:2
+      Events:
+        ExplicitApi:
+          Type: HttpApi
+          Properties:
+            ApiId:
+              Ref: HttpApi
+            Method: GET
+            Path: /
+            PayloadFormatVersion: '2.0'
+  HttpApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      CorsConfiguration:
+        AllowOrigins:
+        - '*'
+Metadata:
+  AWS::ServerlessRepo::Application:
+    Name: serverless-bibcard
+    Description: Serverless API for the Bibcard Library
+    Author: Josh Weisman
+    SpdxLicenseId: BSD-3-Clause
+    LicenseUrl: s3://aws-sam-cli-managed-default-samclisourcebucket-fn1hn3mq5ls0/73dcaa0254df7e083f19f824601946e4
+    ReadmeUrl: s3://aws-sam-cli-managed-default-samclisourcebucket-fn1hn3mq5ls0/e25d0d199601ab5153148b5f0abac46d
+    HomePageUrl: https://github.com/jweisman/primo-explore-lod-author-card/serverless-bibcard
+    SourceCodeUrl: https://github.com/jweisman/primo-explore-lod-author-card/serverless-bibcard
+    SemanticVersion: 0.0.2
+Outputs:
+  HttpApiUrl:
+    Description: URL of the BibCard API endpoint
+    Value:
+      Fn::Sub: https://${HttpApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}/
