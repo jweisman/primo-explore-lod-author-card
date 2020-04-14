@@ -1,6 +1,6 @@
 {
   "name": "primo-explore-lod-author-card",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Linked Open Data Author Card for Primo Explore",
   "main": "index.js",
   "repository": {

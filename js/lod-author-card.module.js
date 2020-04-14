@@ -74,7 +74,7 @@ angular
                   <img ng-src="{{bibcard.dbpedia_resource.depiction|secureSrc}}" style="width: 100%">\
                 </div>\
               </div>\
-              <div>\
+              <div ng-if="bibcard.wikidata_entity.notable_works && bibcard.wikidata_entity.notable_works.length>0">\
                 <span class="md-subhead">Notable works</span>\
                 <ul>\
                   <li ng-repeat="work in bibcard.wikidata_entity.notable_works">\
