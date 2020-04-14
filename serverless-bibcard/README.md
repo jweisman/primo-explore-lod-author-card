@@ -51,4 +51,4 @@ Then deploy the new version of the layer.
 ## Deploy the Serverless API
 This app is available in the [AWS Serverless Application Repository](https://serverlessrepo.aws.amazon.com/applications/arn:aws:serverlessrepo:us-east-1:523567452838:applications~serverless-bibcard). 
 
-Click to [Deploy the Serverless Application](https://console.aws.amazon.com/lambda/home#/create/app?applicationId=arn:aws:serverlessrepo:us-east-1:523567452838:applications~serverless-bibcard) from the AWS Console.
+Click to [Deploy the Serverless Application](https://console.aws.amazon.com/lambda/home#/create/app?applicationId=arn:aws:serverlessrepo:us-east-1:523567452838:applications~serverless-bibcard) from the AWS Console. (_Note that the dependency layer is published in us-east-1 so you should deploy your function there as well._)
