@@ -1,6 +1,6 @@
 
-layer/ruby
-pagckage.yml
+layer/ruby/gems
+package.yml
 .aws-sam
 .bundle
 samconfig.toml

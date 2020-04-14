@@ -1,10 +1,4 @@
-# Support bibcard which is installed from Github
-load_paths = Dir["/opt/ruby/gems/2.7.0/bundler/gems/**/lib"]
-$LOAD_PATH.unshift(*load_paths)
-
-#require 'bundler'
-#Bundler.setup
-require 'bib_card'
+require 'bibcard_lib'
 
 def lambda_handler(event:, context:)
   puts event
