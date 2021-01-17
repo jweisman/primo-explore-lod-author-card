@@ -1,4 +1,4 @@
-require 'bibcard_lib'
+require 'bib_card'
 
 def lambda_handler(event:, context:)
   puts event

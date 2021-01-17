@@ -13,8 +13,9 @@ Resources:
       CodeUri: ./src
       Handler: lambda_function.lambda_handler
       Runtime: ruby2.7
+      FunctionName: BibCardServerless
       Layers:
-        - arn:aws:lambda:us-east-1:523567452838:layer:BibCard-Dependencies:3
+        - arn:aws:lambda:us-east-1:523567452838:layer:BibCard-Dependencies:4
       Events:
         ExplicitApi:
           Type: HttpApi

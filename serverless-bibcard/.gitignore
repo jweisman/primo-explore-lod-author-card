@@ -1,6 +1,7 @@
 
 layer/ruby/gems
-package.yml
+*.packaged.yaml
 .aws-sam
 .bundle
 samconfig.toml
+.npmrc

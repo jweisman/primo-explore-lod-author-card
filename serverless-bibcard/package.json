@@ -1,0 +1,14 @@
+{
+  "name": "serverless-bibcard",
+  "version": "1.0.0",
+  "description": "Serverless BibCard",
+  "author": "Josh Weisman",
+  "license": "BSD-3-Clause",
+  "scripts": {
+    "start": "sam local start-api --warm-containers EAGER",
+    "package": "aws cloudformation package --template ./template.yaml --s3-bucket $npm_config_s3_bucket_name --output-template template.packaged.yaml --region $npm_config_region --s3-prefix sam",
+    "deploy": "npm run package && aws cloudformation deploy --template-file template.packaged.yaml --stack-name $npm_config_cloud_formation_stack_name --capabilities CAPABILITY_IAM --region $npm_config_region && npm run describe-stack",
+    "delete-stack": "aws cloudformation delete-stack --stack-name $npm_config_cloud_formation_stack_name --region $npm_config_region",
+    "describe-stack": "aws cloudformation describe-stacks --stack-name $npm_config_cloud_formation_stack_name --region $npm_config_region --query 'Stacks[0].Outputs[*].{Key:OutputKey,Value:OutputValue,Description:Description}' --output table"
+  }
+}

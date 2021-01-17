@@ -46,11 +46,10 @@ angular
     bindings: {parentCtrl: '<'},
     controller: 'LodAuthorCardComponentController',
     template: '\
-    <div class="full-view-section lod-author-card" flex-md="80" flex-lg="80" flex-xl="80" flex>\
-    <div class="layout-full-width full-view-section-content">\
+    <div class="lod-author-card">\
       <div class="section-header" layout="row" layout-align="center center">\
         <h2 class="section-title md-title light-text">\
-          More information about the author:\
+          More information about the author\
         </h2>\
         <md-divider flex></md-divider>\
       </div>\
@@ -89,6 +88,5 @@ angular
         <md-progress-circular ng-if="loading" md-mode="indeterminate"></md-progress-circular>\
       </div>\
     </div>\
-  </div>\
   '
 });

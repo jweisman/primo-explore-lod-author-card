@@ -1,9 +1,8 @@
 
 /**** LOD Author Card ****/
-.full-view-section.lod-author-card {
+.lod-author-card {
   background-color: #f3f3f3;
-  margin-top:0px;
-  padding-left: 3em;
+  margin-top:2.5em;
 }
 
 md-progress-circular svg path {
