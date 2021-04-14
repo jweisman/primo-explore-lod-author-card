@@ -37,7 +37,7 @@ import 'primo-explore-lod-author-card';
 const app = angular.module('viewCustom', ['lodAuthorCard']);
 ```
 
-Add the `appointment-scheduler` component to the `prmAccountOverviewAfter` placeholder as follows:
+Add the `lod-author-card-component` component to the `prmFullViewAfter` placeholder as follows:
 ```js
 /** Linked Data Author Card */
 app.component('prmFullViewAfter', {
