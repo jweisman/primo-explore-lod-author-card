@@ -1,15 +1,15 @@
 {
-  "name": "primo-explore-lod-author-card",
+  "name": "primo-studio-lod-author-card",
   "version": "0.0.4",
-  "description": "Linked Open Data Author Card for Primo Explore",
-  "main": "./dist/index.js",
+  "description": "Linked Open Data Author Card for Primo Studio",
+  "main": "./js/primoStudioLodAuthorCard.js",
   "scripts": {
-    "build": "webpack --mode=production",
-    "buildall": "npm run build && cd ./primo-studio-lod-author-card && npm run build"
+    "build": "node version.js && webpack --mode=production"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jweisman/primo-explore-lod-author-card.git"
+    "url": "git+https://github.com/jweisman/primo-explore-lod-author-card.git",
+    "directory": "primo-studio-lod-author-card"
   },
   "keywords": [
     "primo-explore",

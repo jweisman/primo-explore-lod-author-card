@@ -1,0 +1,35 @@
+<div class="lod-author-card">
+  <div class="section-body" layout="row">
+    <div ng-if="!$ctrl.loading">
+      <span ng-if="!$ctrl.bibcard">No further information is available for this author</span>
+      <md-card ng-if="$ctrl.bibcard">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{$ctrl.bibcard.name}}</span>
+            <span class="md-subhead">{{$ctrl.bibcard.wikidata_entity.description}}
+              ({{$ctrl.bibcard.birth_date | date:'mediumDate'}}-{{$ctrl.bibcard.death_date | date:'mediumDate'}})</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <div layout="row" layout-xs="column">
+            <div flex="" class="lod-author-card-abstract">
+              {{$ctrl.bibcard.dbpedia_resource.abstract}}
+            </div>
+            <div flex="33">
+              <img ng-src="{{$ctrl.bibcard.dbpedia_resource.depiction|secureSrc}}" class="picture">
+            </div>
+          </div>
+          <div ng-if="$ctrl.bibcard.wikidata_entity.notable_works && $ctrl.bibcard.wikidata_entity.notable_works.length>0">
+            <span class="md-subhead">Notable works</span>
+            <ul>
+              <li ng-repeat="work in $ctrl.bibcard.wikidata_entity.notable_works">
+                <a ng-href="{{$ctrl.searchUrl + '&query=title,contains,' + (work | escape)}}"
+                  target="_blank">{{work}}</a>
+              </li>
+            </ul>
+          </div>
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+</div>
