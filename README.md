@@ -24,7 +24,7 @@ View these live examples:
     ```
 4. Install this package:
     ```
-    npm install primo-explore-appointment-scheduler --save-dev
+    npm install primo-explore-lod-author-card --save-dev
     ```
 
 ## Usage
@@ -37,12 +37,14 @@ import 'primo-explore-lod-author-card';
 const app = angular.module('viewCustom', ['lodAuthorCard']);
 ```
 
-Add the `lod-author-card-component` component to the `prmFullViewAfter` placeholder as follows:
+Add the `primo-explore-lod-author-card` component to the `prmFullViewAfter` placeholder as follows:
 ```js
 /** Linked Data Author Card */
 app.component('prmFullViewAfter', {
   bindings: {parentCtrl: '<'},
-  template: `<lod-author-card-component parent-ctrl="$ctrl.parentCtrl"></lod-author-card-component>`
+  template: `<primo-explore-lod-author-card
+    parent-ctrl="$ctrl.parentCtrl">
+  </primo-explore-lod-author-card>`
 });
 /** END Linked Data Author Card */
 ```

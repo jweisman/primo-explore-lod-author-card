@@ -5,6 +5,6 @@
   "what": "Linked Data Author Card",
   "linkGit": "https://github.com/jweisman/primo-explore-lod-author-card",
   "npmid": "primo-studio-lod-author-card",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "hook": "prm-full-view-after"
 }

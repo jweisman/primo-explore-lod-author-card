@@ -1,11 +1,10 @@
 {
   "name": "primo-explore-lod-author-card",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Linked Open Data Author Card for Primo Explore",
-  "main": "./dist/index.js",
+  "main": "./js/primoExploreLodAuthorCard.js",
   "scripts": {
-    "build": "webpack --mode=production",
-    "buildall": "npm run build && cd ./primo-studio-lod-author-card && npm run build"
+    "build": "node version.js && webpack --mode=production"
   },
   "repository": {
     "type": "git",

@@ -1,12 +1,14 @@
 const path = require('path');
+const camelCase = require('lodash/camelCase');
+const { name } = require('./package.json');
 
 const config = {
   entry: {
     index: path.resolve('./', 'src/index.js'),
   },
   output: {
-    path: path.resolve('./', 'dist'),
-    filename: 'index.js',
+    path: path.resolve('./', 'js'),
+    filename: `${camelCase(name)}.js`,
   },
   module: {
     rules: [{
