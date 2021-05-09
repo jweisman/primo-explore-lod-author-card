@@ -7,10 +7,18 @@ When a full record is displayed, the MMS ID is retrieved and the Alma [JSON-LD L
 ### Screenshot
 ![screenshot](primo-explore-lod-author-card.png)
 
+This add-on works for records with authors linked to LC Names authorities:
+
+<img src="primo-explore-lod-author-card-authorized-author.png" width="400" alt="screenshot">
+
 ### Live examples
 View these live examples:
 * [Michelle Obama](https://tr-integration.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma99503141300561&vid=TR_INTEGRATION_INST:LD)
 * [J. K. Rowling](https://tr-integration.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma99439777500561&vid=TR_INTEGRATION_INST:LD)
+
+### Pre-requisites
+* This add-on currently works only with Primo VE. 
+* This add-on works with the [Linked Data](https://developers.exlibrisgroup.com/alma/integrations/linked_data/) features of Alma and requires that the [Linked Data integration profile](https://knowledge.exlibrisgroup.com/Alma/Product_Documentation/010Alma_Online_Help_(English)/090Integrations_with_External_Systems/030Resource_Management/200Linked_Data) be activated.
 
 ## Install
 1. Make sure you've installed and configured [primo-explore-devenv](https://github.com/ExLibrisGroup/primo-explore-devenv).
