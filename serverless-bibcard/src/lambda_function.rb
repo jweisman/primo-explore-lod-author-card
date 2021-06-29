@@ -1,7 +1,7 @@
 require 'bib_card'
 
 def lambda_handler(event:, context:)
-  puts event
+  #puts event
   begin
     uri = event["uri"] || event["queryStringParameters"]["uri"]
     raise "No URI provided" if !uri
@@ -13,8 +13,9 @@ def lambda_handler(event:, context:)
 end
 
 def transform_person(person)
+  puts person.name
   obj = {
-    :name => person.name(["en", "en-US"]),
+    :name => person.name,
     :birth_date => person.birth_date,
     :death_date => person.death_date,
     :uri => person.uri
